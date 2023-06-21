@@ -14,7 +14,31 @@ class UtilTest {
     val mainCoroutineRule = MainCoroutineRule()
 
     @Test
+    fun testGetUserName() {
+        val sut = Util(mainCoroutineRule.testDispatcher)
+        runTest {
+            sut.getUserName()
+        }
+    }
+
+    @Test
     fun testGetUser() {
+        val sut = Util(mainCoroutineRule.testDispatcher)
+        runTest {
+            sut.getUser()
+        }
+    }
+
+    @Test
+    fun testGetAddress() {
+        val sut = Util(mainCoroutineRule.testDispatcher)
+        runTest {
+            sut.getAddress()
+        }
+    }
+
+    @Test
+    fun testGetAddressDetail() {
         val sut = Util(mainCoroutineRule.testDispatcher)
         runTest {
             sut.getAddressDetail()
